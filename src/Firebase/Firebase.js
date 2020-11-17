@@ -4,11 +4,11 @@ import 'firebase/auth';
 
 const config = {
   apiKey: process.env.REACT_APP_APIKEY,
-  authDomain: 'todos-auth.firebaseapp.com',
-  databaseURL: 'https://todos-auth.firebaseio.com',
-  projectId: 'todos-auth',
-  storageBucket: 'todos-auth.appspot.com',
-  messagingSenderId: '843182406370',
+  authDomain: "keep-a7233.firebaseapp.com",
+  databaseURL: "https://keep-a7233.firebaseio.com",
+  projectId: "keep-a7233",
+  storageBucket: "keep-a7233.appspot.com",
+  messagingSenderId: "1017364620976",
 };
 
 firebase.initializeApp(config);
