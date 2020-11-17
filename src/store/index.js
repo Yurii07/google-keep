@@ -20,7 +20,7 @@ const composeEnhancers =
 const store = createStore(
   rootReducer,
   composeEnhancers(
-      reactReduxFirebase(firebase, rrfConfig),
+    reactReduxFirebase(firebase, rrfConfig),
     reduxFirestore(firebase),
     applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore }))
   )
