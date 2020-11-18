@@ -7,10 +7,6 @@ const InputWrapper = styled.div`
   position: relative;
   margin-bottom: 3.5rem;
   flex-direction: column;
-
-  &:last-of-type {
-    margin-bottom: 4.5rem;
-  }
 `;
 
 const StyledInput = styled.input`
@@ -30,7 +26,7 @@ const StyledInput = styled.input`
 
 const Error = styled.div`
   color: var(--color-errorRed);
-  visibility: ${({ show }) => (show ? 'visibile' : 'hidden')};
+  visibility: ${({ show }) => (show ? 'visible' : 'hidden')};
   opacity: ${({ show }) => (show ? '1' : '0')};
   transform: translateY(${({ show }) => (show ? '20px' : '10px')});
   transition: all 0.1s;
