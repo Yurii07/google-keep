@@ -62,7 +62,7 @@ const AddTodo = ({ addTodo, loading, error }) => {
             resetForm();
           }}
         >
-          {({ isSubmitting, isValid }) => (
+          {({ isSubmitting, isValid ,resetForm}) => (
             <StyledForm>
               <Field
                 type="text"
@@ -80,7 +80,10 @@ const AddTodo = ({ addTodo, loading, error }) => {
                 >
                   Add todo
                 </Button>
-                <Button color="main" contain onClick={() => setisOpened(false)}>
+                <Button type="button" color="main" contain onClick={() => {
+                  setisOpened(false);
+                  resetForm();
+                }}>
                   Cancel
                 </Button>
               </ButtonsWrapper>
