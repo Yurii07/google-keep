@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import styled from 'styled-components';
 
 import DeleteTodo from "./DeleteTodo/DeleteTodo";
+import InputTodo from "../InputTodo/InputTodo";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -28,7 +29,8 @@ justify-content: center;
 `
 const editStyles = {
     color: 'var(--color-main)',
-    margin: '0 .5rem'
+    margin: '0 .5rem',
+    cursor: 'pointer'
 }
 const deleteStyles = {
     color: 'var(--color-errorRed)',
@@ -38,13 +40,16 @@ const deleteStyles = {
 
 const Todo = ({ todo }) => {
     const [isDeleting, setisDeleting] = useState(false);
+    const [isEditing, setIsEditing] = useState(false)
+
     console.log(isDeleting);
     return <Wrapper>
     {todo.todo}
     <Controls>
-        <i className="far fa-edit" style={editStyles}/>
+        <i className="far fa-edit" style={editStyles} onClick={()=> setIsEditing(true)}/>
         <i className="far fa-trash-alt" style={deleteStyles} onClick={()=> setisDeleting(true)}/>
         <DeleteTodo todo={todo} show={isDeleting} close={() => setisDeleting(false)}/>
+        <InputTodo editTodo={todo} opened={isEditing} close={() => setIsEditing(false)}/>
     </Controls>
   </Wrapper>;
 };
