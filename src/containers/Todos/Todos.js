@@ -42,7 +42,7 @@ const Todos = ({ todos, requesting, requested, userId }) => {
         <Loader isWhite />
       </Content>
     );
-  } else if (!todos[userId] && requested[`todos/${userId}`]) {
+  } else if (!todos[userId] && requested[`todos/${userId}`] || todos[userId].todos.length === 0 ) {
     content = (
       <Content>
         <Heading color="white" size="h2">
