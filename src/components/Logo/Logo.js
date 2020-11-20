@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { DingdingOutlined } from '@ant-design/icons';
 
 const LogoWrapper = styled.div`
   color: var(--color-white);
@@ -12,7 +13,7 @@ const LogoWrapper = styled.div`
 `;
 
 const Logo = () => {
-  return <LogoWrapper>Productivity</LogoWrapper>;
+  return <LogoWrapper><DingdingOutlined style={{fontSize: '30px'}}/> </LogoWrapper>;
 };
 
 export default Logo;

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import {Formik, Field} from 'formik';
 import * as Yup from 'yup';
@@ -39,10 +39,10 @@ const InputTodo = ({editTodo, close, opened, addTodo, loading, error, editTodoAc
         <>
 
             <Modal opened={opened} close={close}>
-                <Heading noMargin size="h1" color="white">
+                <Heading noMargin size="h1" color="black">
                     {editTodo ? 'Edit your todo ' : 'Add your new todo'}
                 </Heading>
-                <Heading bold size="h4" color="white">
+                <Heading bold size="h4" color="black">
                     {editTodo ? 'Edit your todo and tap edit' : 'Type your todo and press add'}
 
                 </Heading>
@@ -74,7 +74,7 @@ const InputTodo = ({editTodo, close, opened, addTodo, loading, error, editTodoAc
                             <ButtonsWrapper>
                                 <Button
                                     contain
-                                    color="main"
+                                    color="mainLighter"
                                     type="submit"
                                     disabled={!isValid || isSubmitting}
                                     loading={loading ? loadingText : null}

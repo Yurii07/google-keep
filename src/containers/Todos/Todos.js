@@ -73,7 +73,7 @@ const Todos = ({ todos, requested, userId }) => {
           <Heading bold size="h4" color="white">
             All you have to do for now...
           </Heading>
-          <Button color="main" contain onClick={() => setIsAdding(true)}>
+          <Button color="mainLighter" contain onClick={() => setIsAdding(true)}>
             Add Todo
           </Button>
           <InputTodo opened={isAdding} close={()=>setIsAdding(false)}/>

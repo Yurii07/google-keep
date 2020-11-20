@@ -1,4 +1,5 @@
 import React from 'react';
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
