@@ -98,6 +98,12 @@ const SignUp = ({ signUp, loading, error, cleanUp }) => {
               placeholder="Re-type your password..."
               component={Input}
             />
+              <Field
+                  type="file"
+                  name="uploadImage"
+                  placeholder="choose your image"
+                  component={Input}
+              />
             <Button
               disabled={!isValid || isSubmitting}
               loading={loading ? 'Signing up...' : null}
